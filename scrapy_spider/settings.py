@@ -40,7 +40,7 @@ LOG_LEVEL = 'DEBUG'
 # Introduce an artifical delay to make use of parallelism. to speed up the
 # crawl.
 DOWNLOAD_DELAY = 1
-
-REDIS_HOST = '192.168.0.102'
-REDIS_PORT = 6379
+REDIS_HOST = '127.0.0.1'
+#REDIS_HOST = '192.168.0.102'
+#REDIS_PORT = 6379
 
