@@ -4,18 +4,18 @@ import re
 import json
 from urlparse import urlparse
 
-with open('./category.json', 'r') as f:
+with open('category.json', 'r') as f:
     maps = json.load(f)
 
-def format_array(li):
+def check_list(li):
     return (li and li[0].encode('utf-8').strip()) or ''
 
-def format_str(li):
+def check_str(li):
     return (li and li.encode('utf-8').replace('\n','').strip()) or ''
 
 def get_coName(name):
     if not name:
-        return
+        return ''
     res = re.sub(r'\s{2,}',' ',name[0])
     return name[0] if not res else res.strip()
 

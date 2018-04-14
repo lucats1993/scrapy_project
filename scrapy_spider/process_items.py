@@ -62,16 +62,16 @@ def process_items(r, keys, timeout, limit=0, log_every=1000, wait=.1):
 
 
 def main():
-    parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('key', help="Redis key where items are stored")
-    parser.add_argument('--host')
-    parser.add_argument('--port')
-    parser.add_argument('--timeout', type=int, default=5)
-    parser.add_argument('--limit', type=int, default=0)
-    parser.add_argument('--progress-every', type=int, default=100)
-    parser.add_argument('-v', '--verbose', action='store_true')
+    # parser = argparse.ArgumentParser(description=__doc__)
+    # parser.add_argument('key', help="Redis key where items are stored")
+    # parser.add_argument('--host', default='192.168.0.102')
+    # parser.add_argument('--port',default='3306')
+    # parser.add_argument('--timeout', type=int, default=5)
+    # parser.add_argument('--limit', type=int, default=0)
+    # parser.add_argument('--progress-every', type=int, default=100)
+    # parser.add_argument('-v', '--verbose', action='store_true')
 
-    args = parser.parse_args()
+    args = {'host':'192.168.0.102','port':'3306'}
 
     params = {}
     if args.host:
