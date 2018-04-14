@@ -12,7 +12,11 @@ sys.setdefaultencoding("utf-8")
 
 class CompanySpider(RedisSpider):
     name = "co_spider"
-    start_urls = ["https://www.europages.co.uk/business-directory-europe.html"]
+    # start_urls = ["https://www.europages.co.uk/business-directory-europe.html"]
+
+    def start_requests(self):
+        url = 'https://www.europages.co.uk/business-directory-europe.html'
+        yield Request(url)
 
     def parse(self, response):
         nodes = response.xpath('//div[@class="clickable"]/h2/a')
