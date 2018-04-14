@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import json
-
+import os
 
 class Category(object):
     __species = None
@@ -14,7 +14,7 @@ class Category(object):
 
     def __init__(self, key):
         if self.__first_init:
-            with open('./module/category.json', 'r') as f:
+            with open('category.json', 'r') as f:
                 self.maps = json.load(f)
             self.__class__.__first_init = False
         self.key = key
